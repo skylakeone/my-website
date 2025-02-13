@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button!</h1>
+    <p id="text">Hello, welcome to my webpage.</p>
+    <button onclick="toggleText()">Click Me</button>
+
+    <script>
+        function toggleText() {
+            let paragraph = document.getElementById("text"); // Get the paragraph element
+            
+            // Check the current text and toggle
+            if (paragraph.innerText === "Hello, welcome to my webpage.") {
+                paragraph.innerText = "You clicked the button!";
+            } else {
+                paragraph.innerText = "Hello, welcome to my webpage.";
+            }
+        }
+    </script>
+
+</body>
+</html>
